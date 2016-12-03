@@ -1,0 +1,8 @@
+/master
+/worker
+/build.conf
+
+/deploy.sh
+/restart.sh
+
+/.vscode

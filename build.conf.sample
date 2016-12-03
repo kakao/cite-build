@@ -1,0 +1,19 @@
+[github]
+api_url = https://api.github.com
+api_token = [service account access token]     ## https://github.com/settings/tokens
+base_url = https://github.com
+
+[docker]
+registry = [docker-registry-host]/cite     ## https://github.com/docker/distribution
+
+[buildbot]
+workers = [
+    "[buildbot-worker-name]",
+    ]
+worker_instance = 4
+worker_password = cite-buildbot-worker
+title = Cite Build
+title_url = [your-buildbot-title]
+url = [your-buildbot-url]
+database = sqlite:///state.sqlite
+##database = mysql://[username]:[password]@[mysql_host]/buildbot?max_idle=300
