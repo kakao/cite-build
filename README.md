@@ -21,7 +21,7 @@ pip install -U MySQL-python
 
 2. link master script to master directory
 
-    ```ln -s `pwd`/master-cite.py master/master.cfg```
+    ```ln -s `pwd`/master_cite.py master/master.cfg```
 
 3. link master config
 
@@ -32,7 +32,7 @@ pip install -U MySQL-python
 
 4. start master
 
-    ```buildbot start --nodaemon master```
+    ```buildbot start master```
 
 5. see log
     
@@ -45,7 +45,7 @@ pip install -U MySQL-python
 
 2. start worker
 
-    ```buildbot-worker start --nodaemon worker```
+    ```buildbot-worker start worker```
 
 3. see log
 

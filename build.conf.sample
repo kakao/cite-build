@@ -1,15 +1,18 @@
 [github]
 api_url = https://api.github.com
-api_token = [service account access token]     ## https://github.com/settings/tokens
+## api_token : https://github.com/settings/tokens
+api_token = [service account access token]
 base_url = https://github.com
 
 [docker]
-registry = [docker-registry-host]/cite     ## https://github.com/docker/distribution
+## docker registry : https://github.com/docker/distribution
+registry = [docker-registry-host]/cite
 
 [buildbot]
 workers = [
     "[buildbot-worker-name]",
     ]
+## worker_instance : number of buildbot worker instances per host
 worker_instance = 4
 worker_password = cite-buildbot-worker
 title = Cite Build

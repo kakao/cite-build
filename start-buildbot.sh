@@ -41,13 +41,13 @@ B=`pwd`
 #     fi
 # fi
 
-if [ ! -f "/usr/src/app/master-cite.py" ]
+if [ ! -f "/usr/src/app/master_cite.py" ]
 then
-    echo /usr/src/app/master-cite.py not found!
-    echo Please provide master-cite.py file in /usr/src/app
+    echo /usr/src/app/master_cite.py not found!
+    echo Please provide master_cite.py file in /usr/src/app
     exit 1
 fi
-ln -sf /usr/src/app/master-cite.py $B/master.cfg
+ln -sf /usr/src/app/master_cite.py $B/master.cfg
 
 # copy the default buildbot.tac if not provided by the config
 if [ ! -f $B/buildbot.tac ]

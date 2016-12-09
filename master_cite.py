@@ -1,15 +1,13 @@
 # -*- python -*-
 # ex: set filetype=python:
+"""buildbot master script for cite"""
 import os
 import json
-import requests
 import string
 import ConfigParser
 from buildbot.reporters.github import GitHubStatusPush
 from buildbot.plugins import *
-from buildbot.www.hooks.github import GitHubEventHandler
 from buildbot.process import results
-from buildbot.util import service
 from twisted.internet import defer
 from twisted.python import log
 
@@ -25,20 +23,6 @@ c['titleURL'] = Config.get("buildbot", "title_url")
 c['buildbotURL'] = Config.get("buildbot", "url")
 
 
-class CiteGitHubEventHandler(GitHubEventHandler):
-    def handle_cite(selfself, payload):
-        log.msg("CITE: cite event received: {payload}".format(payload=payload))
-        changes = [{
-                'project': payload['project'],
-                'revision': payload['revision'],
-                'branch': payload['branch'],
-                'revlink': payload['revlink'],
-                'repository': payload['repository'],
-                'when_timestamp': payload['when_timestamp'],
-                'author': payload['author'],
-                'comments': payload['comments']
-            }]
-        return (changes, 'git')
 
 class CiteGitHubStatusPush(GitHubStatusPush):
     @defer.inlineCallbacks
@@ -229,9 +213,7 @@ c['services'] = [
 # minimalistic config to activate new web UI
 c['www'] = dict(port=8010,
                 plugins=dict(waterfall_view={}, console_view={}),
-                change_hook_dialects={
-                    'github':{"class": CiteGitHubEventHandler}
-                })
+                change_hook_dialects={'github':{ }})
 
 ####### DB URL
 c['db'] = {
