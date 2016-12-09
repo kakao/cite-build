@@ -1,10 +1,9 @@
 Dockerfile
 README.md
+build.conf
 
-/deploy.sh
-/restart.sh
+deploy.sh
+restart.sh
 
 /master
 /worker
-
-/.vscode

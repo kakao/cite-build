@@ -6,10 +6,9 @@ import json
 import string
 import ConfigParser
 from buildbot.reporters.github import GitHubStatusPush
-from buildbot.plugins import *
+from buildbot.plugins import util, worker, schedulers, steps
 from buildbot.process import results
 from twisted.internet import defer
-from twisted.python import log
 
 CONFIG_PATH = os.getenv('CONFIG_PATH', '/var/lib/buildbot/build.conf')
 
