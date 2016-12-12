@@ -4,7 +4,7 @@
 
 ### install buildbot
 ```
-pip install -U buildbot  buildbot-worker buildbot-www buildbot-console-view buildbot-waterfall-view 
+pip install -U buildbot buildbot-worker buildbot-www buildbot-console-view buildbot-waterfall-view 
 pip install -U txrequests
 ```
 
