@@ -202,7 +202,7 @@ c['builders'].append(
 
 ####### REPORTERS
 c['services'] = [
-    GitHubStatusPush(
+    CiteGitHubStatusPush(
         baseURL=Config.get("github", "api_url"),
         token=Config.get("github", "api_token"),
         verbose=True
