@@ -58,4 +58,3 @@ docker build -t docker-reg.c.9rum.cc/cite-core/cite-build .
 
 ## reference
 * buildbot docs : http://docs.buildbot.net/latest/
-
