@@ -53,7 +53,7 @@ pip install -U MySQL-python
 
 ## package
 ```
-docker build -t docker-reg.c.9rum.cc/cite-core/cite-build .
+docker build -t cite-build .
 ```
 
 ## reference
